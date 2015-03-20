@@ -1,0 +1,53 @@
+/*Basic reset*/
+* {margin: 0; padding: 0;}
+
+body {
+	/*controls backsgroud for entire page*/
+	background: #4EB889;
+}
+/*aligns the menu box, as well as details everything within box*/
+#accordian {
+	background: #004050;
+	width: 250px;
+	margin: 100px auto 0 auto;
+	color: white;
+}
+/*controls the details of the header*/
+#accordian h3 {
+	font-size: 12px;
+	line-height: 34px;
+	padding: 0 10px;
+	cursor: pointer;
+	background: linear-gradient(#003040, #002535);
+}
+/*list items*/
+#accordian li {
+	/*gets rid of the dots next to the list items*/
+	list-style-type: none;
+}
+/*links*/
+#accordian ul ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 27px;
+	display: block;
+	padding: 0 15px;
+	/*transition for smooth hover animation*/
+	transition: all 0.15s;
+}
+/*hover effect on links*/
+#accordian ul ul li a:hover {
+	background: #003545;
+	border-left: 5px solid lightgreen;
+}
+
+/*hides not active list items*/
+#accordian ul ul {
+	display: none;
+}
+
+/*if active then display the list*/
+#accordian li.active ul {
+	display: block;
+}
