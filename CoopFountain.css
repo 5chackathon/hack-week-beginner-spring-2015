@@ -68,3 +68,12 @@ padding: 20px;
 #FoodItems li.active ul {
 	display: block;
 }
+
+#muffin {
+	background: #00FFFF;
+	width: 250px;
+	/*these specific coordinates allow the menu to be right above the food listings*/
+	margin: 100px auto -100px auto;
+	padding: 8px 0px;
+	color: black;
+}
