@@ -1,57 +1,84 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Coop Fountain Menu</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="css/coop.css" />-->
+  <meta charset="utf-8">
+  <title>Coop Fountain</title>
+
+  <!-- Sets initial viewport load and disables zooming -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <!-- Make prototype chrome-less once bookmarked to phone's home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Include Ratchet CSS -->
+  <link href="css/ratchet.min.css" rel="stylesheet">
+
+  <!-- Include our CSS -->
+  <link href="css/coop.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <div id="menu">
-    <ul>
-      <li><a href="index.html">Menu</a></li>
-      <li>Coop</li>
-      <li><a href="tray.html">Tray</a></li>
+  <!-- Header bar (always should be first) -->
+  <header class="bar bar-nav">
+    <a href="index.html">
+      <button class="btn pull-left">
+        Menu
+      </button>
+    </a>
+    <h1 class="title">Coop Fountain</h1>
+    <button class="btn pull-right">
+      Tray
+    </button>
+  </header>
+
+  <!-- Wrap non-bar HTML in .content for scrolling -->
+  <div class="container">
+
+    <!-- List menu categories -->
+    <ul class="table-view">
+      <li class="table-view-cell">A La Carte</li>
+      <li class="table-view-cell">
+        Bagels, Muffins, Pastries
+      </li>
+      <div class="items">
+        <li class="table-view-cell table-view-divider">Bagel
+          <span class="badge badge">$1.40</span>
+        </li>
+        <li class="table-view-cell table-view-divider">Blueberry Scone
+          <span class="badge badge-inverted">$2.50</span>
+        </li>
+        <li class="table-view-cell table-view-divider">Cinnamon Roll
+          <span class="badge badge-inverted">$2.00</span>
+        </li>
+        <li class="table-view-cell table-view-divider">Danish
+          <span class="badge badge-inverted">$1.99</span>
+        </li>
+        <li class="table-view-cell table-view-divider">Muffins
+          <span class="badge badge-inverted">$1.99</span>
+        </li>
+      </div>
+      <li class="table-view-cell">Coop Meals</li>
+      <li class="table-view-cell">Drinks</li>
+      <li class="table-view-cell">From the Fryer</li>
+      <li class="table-view-cell">Mexican</li>
+      <li class="table-view-cell">Rice Bowls</li>
+      <li class="table-view-cell">Salads</li>
+      <li class="table-view-cell">Sandwiches</li>
     </ul>
   </div>
 
-  <div id="food-items">
-    <ul>
-      <!-- default the first list item as active -->
-      <li class="active">
-        <h3>Breakfast</h3>
-        <ul>
-          <li><a href="muffin.html">Muffin</a></li>
-          <li><a href="#">Eggs and bacon</a></li>
-        </ul>
-      </li>
-      <li>
-        <h3>Coop Meals</h3>
-        <ul>
-          <li><a href="#">Chicken Tenders</a></li>
-          <li><a href="#">Hamburger</a></li>
-          <li><a href="#">Hotdog</a></li>
-        </ul>
-      </li>
-      <li>
-        <h3>Sandwiches</h3>
-        <ul>
-          <li><a href="#">Ham</a></li>
-          <li><a href="#">Italian</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <!-- Include Ratchet JS -->
+  <script src="js/ratchet.js"></script>
 
-
-  <!-- jQuery -->
+  <!-- Include jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <!-- Our script-->
-  <script type="text/javascript" SRC="js/coop.js"></script>
-  <!-- Bootstrap -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- Include our script -->
+  <script src="js/coop.js"></script>
 </body>
 
 </html>
