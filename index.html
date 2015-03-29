@@ -36,18 +36,25 @@
   </header>
 
   <!-- Wrap non-bar HTML in .content for scrolling -->
-  <div class="container">
+  <div class="content">
 
     <!-- List menu categories -->
     <ul class="table-view">
       <li class="table-view-cell">A La Carte</li>
       <li class="table-view-cell">
-        Bagels, Muffins, Pastries
+        <a class="navigate-right" href="bagels-muffins-pastries.html"
+        data-transition="slide-in">Bagels, Muffins, Pastries</a>
       </li>
+      <!-- Menu category items -->
+      <!--
       <div class="items">
-        <li class="table-view-cell table-view-divider">Bagel
+        <li class="table-view-cell table-view-divider">
+        <a href="#">
+          Bagel
           <span class="badge badge">$1.40</span>
+        </a>
         </li>
+
         <li class="table-view-cell table-view-divider">Blueberry Scone
           <span class="badge badge-inverted">$2.50</span>
         </li>
@@ -61,6 +68,7 @@
           <span class="badge badge-inverted">$1.99</span>
         </li>
       </div>
+      -->
       <li class="table-view-cell">Coop Meals</li>
       <li class="table-view-cell">Drinks</li>
       <li class="table-view-cell">From the Fryer</li>
@@ -69,16 +77,20 @@
       <li class="table-view-cell">Salads</li>
       <li class="table-view-cell">Sandwiches</li>
     </ul>
+
+    
   </div>
+
+   <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
   <!-- Include Ratchet JS -->
   <script src="js/ratchet.js"></script>
 
-  <!-- Include jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
   <!-- Include our script -->
   <script src="js/coop.js"></script>
+
+  
 </body>
 
 </html>
