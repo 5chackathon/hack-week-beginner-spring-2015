@@ -4,16 +4,31 @@
 <head>
   <title>Tray</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="css/coop.css" />-->
+  <link rel="stylesheet" type="text/css" href="css/coop.css" />
+      <!-- Include Ratchet CSS -->
+  <link href="css/ratchet.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <div id="menu">
-    <ul>
-      <li><a href="index.html">Menu</a></li>
-      <li>Coop</li>
-      <li><a href="tray.html">Tray</a></li>
+  <!-- Header bar (always should be first) -->
+  <header class="bar bar-nav">
+    <a href="index.html">
+      <button class="btn pull-left">
+        Menu
+      </button>
+    </a>
+    <h1 class="title">Coop Fountain</h1>
+    <a href="tray.html">
+        <button class="btn pull-right">
+        Tray
+        </button>
+    </a>
+  </header>
+    
+<!--   Wrap non-bar HTML in .content for scrolling -->
+  <div class="content">
+    <ul id="tray" class="table-view">
     </ul>
   </div>
 

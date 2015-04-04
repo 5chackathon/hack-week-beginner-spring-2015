@@ -17,6 +17,12 @@
 
   <!-- Include our CSS -->
   <link href="css/coop.css" rel="stylesheet">
+    
+   <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Include our script -->
+  <script src="js/coop.js"></script>    
 
 </head>
 
@@ -30,65 +36,22 @@
       </button>
     </a>
     <h1 class="title">Coop Fountain</h1>
-    <button class="btn pull-right">
-      Tray
-    </button>
+    <a href="tray.html">
+        <button class="btn pull-right">
+        Tray
+        </button>
+    </a>
   </header>
 
   <!-- Wrap non-bar HTML in .content for scrolling -->
   <div class="content">
 
     <!-- List menu categories -->
-    <ul class="table-view">
-      <li class="table-view-cell">A La Carte</li>
-      <li class="table-view-cell">
-        <a class="navigate-right" href="bagels-muffins-pastries.html"
-        data-transition="slide-in">Bagels, Muffins, Pastries</a>
-      </li>
-      <!-- Menu category items -->
-      <!--
-      <div class="items">
-        <li class="table-view-cell table-view-divider">
-        <a href="#">
-          Bagel
-          <span class="badge badge">$1.40</span>
-        </a>
-        </li>
-
-        <li class="table-view-cell table-view-divider">Blueberry Scone
-          <span class="badge badge-inverted">$2.50</span>
-        </li>
-        <li class="table-view-cell table-view-divider">Cinnamon Roll
-          <span class="badge badge-inverted">$2.00</span>
-        </li>
-        <li class="table-view-cell table-view-divider">Danish
-          <span class="badge badge-inverted">$1.99</span>
-        </li>
-        <li class="table-view-cell table-view-divider">Muffins
-          <span class="badge badge-inverted">$1.99</span>
-        </li>
-      </div>
-      -->
-      <li class="table-view-cell">Coop Meals</li>
-      <li class="table-view-cell">Drinks</li>
-      <li class="table-view-cell">From the Fryer</li>
-      <li class="table-view-cell">Mexican</li>
-      <li class="table-view-cell">Rice Bowls</li>
-      <li class="table-view-cell">Salads</li>
-      <li class="table-view-cell">Sandwiches</li>
+    <ul class="table-view" id="menu_categories">
     </ul>
 
     
   </div>
-
-   <!-- Include jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <!-- Include Ratchet JS -->
-  <script src="js/ratchet.js"></script>
-
-  <!-- Include our script -->
-  <script src="js/coop.js"></script>
 
   
 </body>
