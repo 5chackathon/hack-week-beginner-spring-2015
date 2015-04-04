@@ -33,10 +33,14 @@
       </button>
     </a>
     <h1 class="title">Coop Fountain</h1>
+    <button class="btn pull-right">
+      Tray
+    </button>
   </header>
 
   <!-- Wrap non-bar HTML in .content for scrolling -->
   <div class="content">
+  
     <ul class="table-view">
       <li class="table-view-cell">
         <input type="checkbox" name="bagel" value="cream-cheese" data-price=".85"/> Add cream cheese
@@ -56,17 +60,12 @@
       </li>
     
     </ul>
-    <button onclick="orderClick(1.40);">Add to tray</button>
-    <button onclick="sendMail(); return false"></button>
+    <button class="btn btn-positive btn-block" onclick="orderClick('bagel', 1.40);">Add to tray</button>
   </div>
   
 
    <!-- Include jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <!-- Include Ratchet JS -->
-  <script src="js/ratchet.js"></script>
-
   
 </body>
 
