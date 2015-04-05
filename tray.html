@@ -1,12 +1,29 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Tray</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/coop.css" />
-      <!-- Include Ratchet CSS -->
+  <meta charset="utf-8">
+  <title>Coop Fountain</title>
+
+  <!-- Sets initial viewport load and disables zooming -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <!-- Make prototype chrome-less once bookmarked to phone's home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Include Ratchet CSS -->
   <link href="css/ratchet.min.css" rel="stylesheet">
+
+  <!-- Include our CSS -->
+  <link href="css/coop.css" rel="stylesheet">
+    
+   <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Include our script -->
+  <script src="js/coop.js"></script>    
+
 </head>
 
 <body>
@@ -25,20 +42,16 @@
         </button>
     </a>
   </header>
-    
-<!--   Wrap non-bar HTML in .content for scrolling -->
+
+  <!-- Wrap non-bar HTML in .content for scrolling -->
   <div class="content">
-    <ul id="tray" class="table-view">
+
+    <!-- List menu categories -->
+    <ul class="table-view" id="tray">
     </ul>
+  <button class="btn btn-positive btn-block ">Submit order</button>
   </div>
 
-
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <!-- Our script-->
-  <script type="text/javascript" SRC="js/coop.js"></script>
-  <!-- Bootstrap -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 
 </html>

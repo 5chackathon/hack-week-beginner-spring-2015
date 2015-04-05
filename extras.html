@@ -18,6 +18,9 @@
   <!-- Include our CSS -->
   <link href="css/coop.css" rel="stylesheet">
 
+   <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
   <!-- Include our script -->
   <script src="js/coop.js"></script>
 
@@ -33,40 +36,24 @@
       </button>
     </a>
     <h1 class="title">Coop Fountain</h1>
+    <a href="tray.html">
     <button class="btn pull-right">
       Tray
     </button>
+    </a>
   </header>
 
   <!-- Wrap non-bar HTML in .content for scrolling -->
   <div class="content">
 
     <!-- List of options -->
-    <ul class="table-view">
-      <li class="table-view-cell">
-        <input type="checkbox" name="bagel" value="cream-cheese" data-price=".85" /> Add cream cheese
-        <span class="badge badge-inverted">$0.85</span>
-      </li>
-      <li class="table-view-cell">
-        <input type="checkbox" name="bagel" value="lox" data-price="3.00" /> Add lox
-        <span class="badge badge-inverted">$3.00</span>
-      </li>
-      <li class="table-view-cell">
-        <input type="checkbox" name="bagel" value="produce" data-price=".75" /> Add produce
-        <span class="badge badge-inverted">$0.75</span>
-      </li>
-      <li class="table-view-cell">
-        <input type="checkbox" name="bagel" value="bacon" data-price=".99" /> Add bacon
-        <span class="badge badge-inverted">$0.99</span>
-      </li>
+    <ul class="table-view" id="extras">
     </ul>
 
     <!-- Add to tray button -->
-    <button class="btn btn-positive btn-block" onclick="orderClick('bagel', 1.40);">Add to tray</button>
+    <button class="btn btn-positive btn-block submit">Add to tray</button>
   </div>
 
-    <!-- Include jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 </body>
 </html>

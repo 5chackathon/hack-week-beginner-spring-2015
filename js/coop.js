@@ -1,7 +1,8 @@
+
 $(function() {
     //----TRAY PAGE -----
-    //tray object
-    var tray = []; //list of items
+
+    var tray = [];
     
     addItem("bagel", ["cream cheese","lox"], 2);
     addItem("muffin", [], 3);
@@ -20,6 +21,7 @@ $(function() {
     
     function displayTray(){
         $("#tray").empty();//empty ul before filling again
+
         for(i=0; i < tray.length; i++){
             var item = tray[i];
             var li = $("<li>").addClass("table-view-cell").addClass("media");
@@ -81,28 +83,23 @@ $(function() {
         var extra_prices = bagel_extras.extra_prices;
         for(var j=0; j < extra_names.length; j++){
             var newli = $("<li>").addClass("table-view-cell");
-            //li.append(j);
-            //var input = $("<input>").attr("type","checkbox");
-            //input.attr("name", itemName).attr("value",extra_names[j]);
-            //var span = $("<span>").addClass("badge").append("$"+extra_prices[j]);
-            //li.append(input);
-            //li.append("Add "+extra_names[j]);
-            //li.append(span);
-            //$("#extras").append(li);
-            $("#extras").append("djghf");
-            
-            console.log($("#extras"));
+            // li.append(j);
+            var input = $("<input>").attr("type","checkbox");
+            input.attr("name", itemName).attr("value",extra_names[j]);
+            var span = $("<span>").addClass("badge").append("$"+extra_prices[j]);
+            newli.append(input);
+            newli.append("Add "+extra_names[j]);
+            newli.append(span);
+            $("#extras").append(newli);
         }
     }
 
-//      <li class="table-view-cell">
-//        <input type="checkbox" name="bagel" value="bacon" /> Add bacon
-//         <span class="badge badge-inverted">$0.99</span>
-//      </li>
-    
+    // Fill the options page with bagel options.
+    fillOptionsPage('bagel', bagel_extras);
     
     $('.submit').click(function() {
        addItem("", [], 2.50);//need to implement this 
+       console.log(tray);
     });
     
     //-----FILL ALL SECONDARY MENUS-----
@@ -144,6 +141,11 @@ var orderClick = function(item, base_price) {
     }
   }
 
+  price = price.toFixed(2);
+
+  // Add to tray.
+  addItem(item, options, price);
+
   // Build up our email message.
   message += "Your order is a " + item + ((options.length > 0) ? " with " : "");
 
@@ -157,12 +159,7 @@ var orderClick = function(item, base_price) {
     }
 
   }
-  message += ". Your total price is $" + price.toFixed(2) + ".";
-
-  console.log(message);
-
-  // Send the order e-mail.
-  //sendMail(message);
+  message += ". Your total price is $" + price + ".";
 }
 
 /* Send an e-mail with the order information. */
